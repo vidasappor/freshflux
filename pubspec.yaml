@@ -1,0 +1,91 @@
+name: myfoodwise_app
+description: "A product expiry tracker"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^5.0.0
+  shared_preferences: ^2.0.6
+  flutter_local_notifications: ^9.0.0
+  #speech_to_text: ^6.6.1
+  #flutter_tts: ^3.3.0
+  #camera: ^0.9.4+19
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.6
+  intl: ^0.19.0
+  http: ^1.2.1
+  google_mlkit_barcode_scanning: ^0.2.0
+  camera: ^0.9.4+19
+  firebase_core: ^2.6.0
+  path_provider: ^2.0.11
+  image_picker: ^0.8.5+3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
+
+  # Specify your custom fonts here
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito-Black.ttf
+          weight: 900
+        - asset: fonts/Nunito-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: fonts/Nunito-Bold.ttf
+          weight: 700
+        - asset: fonts/Nunito-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: fonts/Nunito-ExtraBold.ttf
+          weight: 800
+        - asset: fonts/Nunito-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: fonts/Nunito-ExtraLight.ttf
+          weight: 200
+        - asset: fonts/Nunito-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: fonts/Nunito-Italic.ttf
+          style: italic
+        - asset: fonts/Nunito-Light.ttf
+          weight: 300
+        - asset: fonts/Nunito-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: fonts/Nunito-Medium.ttf
+          weight: 500
+        - asset: fonts/Nunito-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: fonts/Nunito-Regular.ttf
+          weight: 400
+        - asset: fonts/Nunito-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Nunito-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
