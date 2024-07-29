@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:myfoodwise_app/provider/theme_provider.dart';
 import 'package:myfoodwise_app/screens/barcode_result.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +11,9 @@ late List<CameraDescription> cameras;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await dotenv.load(fileName: ".env");
+
   cameras = await availableCameras();
   final NotificationService notificationService = NotificationService();
   await notificationService.initNotifications();
@@ -52,7 +56,7 @@ class MyApp extends StatelessWidget {
           ),
           darkTheme: ThemeData.dark(),
           themeMode: themeProvider.themeMode,
-        //home: BarcodeResultScreen(barcode: '43242342342', productName: 'Product Name Not Included', expiryDate: 'Expiry Date Not Included',),
+          //home: BarcodeResultScreen(barcode: '43242342342', productName: 'Product Name Not Included', expiryDate: 'Expiry Date Not Included',),
           home: HomeScreen(notificationService: notificationService),
         );
       },
